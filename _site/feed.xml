@@ -1,19 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Samelot's Twine2 Stores</title>
+    <title>samE's twine2</title>
     <description>A jekyll theme implementing material design by using muicss.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Jan 2017 18:57:20 -0500</pubDate>
-    <lastBuildDate>Sun, 08 Jan 2017 18:57:20 -0500</lastBuildDate>
+    <pubDate>Mon, 09 Jan 2017 10:10:58 -0500</pubDate>
+    <lastBuildDate>Mon, 09 Jan 2017 10:10:58 -0500</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>four</title>
+        <description>&lt;tw-story&gt;&lt;/tw-story&gt;
+
+&lt;tw-storydata name=&quot;2&quot; startnode=&quot;4&quot; creator=&quot;Twine&quot; creator-version=&quot;2.0.11&quot; ifid=&quot;BD834FD5-BDBF-49F3-9793-0CC9C4148012&quot; format=&quot;Harlowe&quot; options=&quot;&quot; hidden=&quot;&quot;&gt;&lt;style role=&quot;stylesheet&quot; id=&quot;twine-user-stylesheet&quot; type=&quot;text/twine-css&quot;&gt;&lt;/style&gt;&lt;script role=&quot;script&quot; id=&quot;twine-user-script&quot; type=&quot;text/twine-javascript&quot;&gt;&lt;/script&gt;&lt;tw-passagedata pid=&quot;1&quot; name=&quot;Janitor&quot; tags=&quot;inventory&quot; position=&quot;174.0002,174&quot;&gt;(set: $inv to $inv + (a: &amp;quot;smartphone&amp;quot;, &amp;quot;keys&amp;quot;, &amp;quot;cyberdeck&amp;quot;))
+Hey, how&amp;#39;d you get in here... this area is off limits! I&amp;#39;d help show you the way out but I&amp;#39;m reading an article my friend wrote that was recently published in the paper. I&amp;#39;m so proud of him ;)
+
+It just takes time for me to read this because I&amp;#39;m not the swiftest reader. Let me give you all the necessary items to find your way out of the building.
+
+The janitor gives you a few items...
+[[Take items, and be on your way-&amp;gt;PathPt1]]
+
+[[Ask about his friend-&amp;gt;FriendOfJanitor]]&lt;/tw-passagedata&gt;
+&lt;tw-passagedata pid=&quot;2&quot; name=&quot;Footer&quot; tags=&quot;footer&quot; position=&quot;752,24&quot;&gt;&amp;lt;br&amp;gt;
+(if: (passage:)&amp;#39;s name is &amp;quot;Inventory&amp;quot;)[&amp;lt;!--do nothing--&amp;gt;](else-if: (passage:)&amp;#39;s tags contains &amp;quot;inventory&amp;quot;)[&amp;lt;center&amp;gt;[[check inventory-&amp;gt;Inventory]]&amp;lt;/center&amp;gt;]
+(click: &amp;quot;smartphone&amp;quot;)[(display: &amp;quot;smartphone&amp;quot;)]&lt;/tw-passagedata&gt;
+&lt;tw-passagedata pid=&quot;3&quot; name=&quot;Inventory&quot; tags=&quot;&quot; position=&quot;882,24&quot;&gt;&amp;lt;h2&amp;gt;Inventory&amp;lt;/h2&amp;gt;
+
+(if: $inv&amp;#39;s length &amp;gt; 0)[Your inventory contains: (print: $inv.join(&amp;quot;, &amp;quot;)).](else:)[Your inventory is empty.]&lt;/tw-passagedata&gt;
+&lt;tw-passagedata pid=&quot;4&quot; name=&quot;Start&quot; tags=&quot;inventory&quot; position=&quot;10,21&quot;&gt;(set: $inv to (a:))
+Take a momement to appreciate this nice courtyard.
+There are birds cherping, and a janitor sits on a bench reading a newspaper.
+
+[[Talk to the old man-&amp;gt;Janitor]]
+[[Mind your own buisness-&amp;gt;PathPt1]]&lt;/tw-passagedata&gt;
+&lt;tw-passagedata pid=&quot;5&quot; name=&quot;smartphone&quot; tags=&quot;&quot; position=&quot;748,211&quot;&gt;This phone is slightly cracked on the side, but the camera is not half-bad and it&amp;#39;s covered in shiny unicorn stickers.
+
+You have 1 missed calls and 1 messages in your voicemail inbox
+
+(link-goto: &amp;quot;Return&amp;quot;, (history:)&amp;#39;s last) &lt;/tw-passagedata&gt;
+&lt;tw-passagedata pid=&quot;6&quot; name=&quot;Hallway&quot; tags=&quot;inventory&quot; position=&quot;541,388&quot;&gt;This door opens up into a hallway. You walk down the hallways and a stranger bumps into you. He was seemed to be in a rush, you didn&amp;#39;t get a chance to find out his name.
+
+(set: $inv to $inv - (a: &amp;quot;bird-seed&amp;quot;))
+
+Oh no, looks like your bird-seed went missing! (print: $inv.join(&amp;quot;, &amp;quot;)).&lt;/tw-passagedata&gt;
+&lt;tw-passagedata pid=&quot;7&quot; name=&quot;BreakIce&quot; tags=&quot;inventory&quot; position=&quot;136.0001,382&quot;&gt;(set: $inv to $inv + (a: &amp;quot;bird-seed&amp;quot;))
+You smash the ice (that covers the bird-bath) with your hands. Fishing around the water, you find some soaked bird-seeds.
+
+[[Continue walking down the path-&amp;gt;PathPt2]]&lt;/tw-passagedata&gt;
+&lt;tw-passagedata pid=&quot;8&quot; name=&quot;FriendOfJanitor&quot; tags=&quot;&quot; position=&quot;317,176&quot;&gt;Double-click this passage to edit it.&lt;/tw-passagedata&gt;
+&lt;tw-passagedata pid=&quot;9&quot; name=&quot;PathPt2&quot; tags=&quot;&quot; position=&quot;271,384&quot;&gt;The path leads to a door. (This must how you exit the courtyard)
+
+[[Exit courtyard-&amp;gt;PathExit]] &lt;/tw-passagedata&gt;
+&lt;tw-passagedata pid=&quot;10&quot; name=&quot;BirdBath&quot; tags=&quot;&quot; position=&quot;11,380&quot;&gt;A very nice bird-bath. You remember the bird-bath your family had set up in the backyard.
+
+Look! There&amp;#39;s a sheet of ice that&amp;#39;s covering the water. How will the birdies take their bathies?
+
+Do the right thing, [[break the ice-&amp;gt;BreakIce]]&lt;/tw-passagedata&gt;
+&lt;tw-passagedata pid=&quot;11&quot; name=&quot;PathPt1&quot; tags=&quot;&quot; position=&quot;11,251&quot;&gt;There is a nice path set out for us to walk on. You walk on the path until you come to an antient [[bird-bath-&amp;gt;BirdBath]]&lt;/tw-passagedata&gt;
+&lt;tw-passagedata pid=&quot;12&quot; name=&quot;PathExit&quot; tags=&quot;&quot; position=&quot;400,387&quot;&gt;(if: $inv contains &amp;quot;keys&amp;quot;)[Oh! You can use your keys to [[unlock your front door-&amp;gt;Hallway]].](else:)[The door is locked. If only you had your housekeys!]&lt;/tw-passagedata&gt;
+&lt;/tw-storydata&gt;
+</description>
+        <pubDate>Sat, 07 Jan 2017 20:57:00 -0500</pubDate>
+        <link>http://localhost:4000/2017/01/07/four.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/01/07/four.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>three</title>
         <description>&lt;tw-story&gt;&lt;/tw-story&gt;
 
-&lt;tw-storydata name=&quot;Documentation3&quot; startnode=&quot;1&quot; creator=&quot;Twine&quot; creator-version=&quot;2.0.11&quot; ifid=&quot;83D08CEE-F6E6-4D6E-A115-041BEAF985C7&quot; format=&quot;Harlowe&quot; options=&quot;&quot; hidden=&quot;&quot;&gt;&lt;style role=&quot;stylesheet&quot; id=&quot;twine-user-stylesheet&quot; type=&quot;text/twine-css&quot;&gt;&lt;/style&gt;&lt;script role=&quot;script&quot; id=&quot;twine-user-script&quot; type=&quot;text/twine-javascript&quot;&gt;&lt;/script&gt;&lt;tw-passagedata pid=&quot;1&quot; name=&quot;Footer&quot; tags=&quot;footer&quot; position=&quot;522,100&quot;&gt;&amp;lt;br&amp;gt;
+&lt;tw-storydata name=&quot;Documentation3&quot; startnode=&quot;3&quot; creator=&quot;Twine&quot; creator-version=&quot;2.0.11&quot; ifid=&quot;83D08CEE-F6E6-4D6E-A115-041BEAF985C7&quot; format=&quot;Harlowe&quot; options=&quot;&quot; hidden=&quot;&quot;&gt;&lt;style role=&quot;stylesheet&quot; id=&quot;twine-user-stylesheet&quot; type=&quot;text/twine-css&quot;&gt;&lt;/style&gt;&lt;script role=&quot;script&quot; id=&quot;twine-user-script&quot; type=&quot;text/twine-javascript&quot;&gt;&lt;/script&gt;&lt;tw-passagedata pid=&quot;1&quot; name=&quot;Footer&quot; tags=&quot;footer&quot; position=&quot;522,100&quot;&gt;&amp;lt;br&amp;gt;
 (if: (passage:)&amp;#39;s name is &amp;quot;Inventory&amp;quot;)[&amp;lt;!--do nothing--&amp;gt;](else-if: (passage:)&amp;#39;s tags contains &amp;quot;inventory&amp;quot;)[&amp;lt;center&amp;gt;[[check inventory-&amp;gt;Inventory]]&amp;lt;/center&amp;gt;]    &lt;/tw-passagedata&gt;
 &lt;tw-passagedata pid=&quot;2&quot; name=&quot;Inventory&quot; tags=&quot;&quot; position=&quot;669,102&quot;&gt;&amp;lt;h2&amp;gt;Inventory&amp;lt;/h2&amp;gt;
 
@@ -33,6 +92,7 @@ Oh no.. the mean monster took away your (print: $inv[$x])!
 (if: $inv&amp;#39;s length is 0)[You&amp;#39;re all out of items, this game is over.](else:)[Be careful, you only have (print: $inv&amp;#39;s length) items left. [[pass through courtyard again-&amp;gt;Loop]]]&lt;/tw-passagedata&gt;
 &lt;tw-passagedata pid=&quot;5&quot; name=&quot;Loop&quot; tags=&quot;&quot; position=&quot;97,398&quot;&gt;(go-to: &amp;quot;Courtyard&amp;quot;)&lt;/tw-passagedata&gt;
 &lt;/tw-storydata&gt;
+
 </description>
         <pubDate>Sat, 07 Jan 2017 20:56:00 -0500</pubDate>
         <link>http://localhost:4000/2017/01/07/three.html</link>

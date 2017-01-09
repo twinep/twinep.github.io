@@ -31,16 +31,5 @@ layout: base
       <div class="post-html">
           {{ content }}
       </div>
-    {% if site.disqus %}
-    <footer>
-      <p><a href="#" id="showComments"><i class="fa fa-comment-o"></i>Comments</a></p>
-      <div id="disqus_thread"></div>
-    </footer>
-    {% endif %}
     </div>
   </article>
-
-  {% if site.disqus %}
-  <script src="/js/script.js"></script>
-  {% endif %}
-

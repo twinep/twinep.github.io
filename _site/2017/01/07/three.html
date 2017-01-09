@@ -11,7 +11,7 @@
 <body style="padding: 0">
 <tw-story></tw-story>
 
-<tw-storydata name="Documentation3" startnode="1" creator="Twine" creator-version="2.0.11" ifid="83D08CEE-F6E6-4D6E-A115-041BEAF985C7" format="Harlowe" options="" hidden=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Footer" tags="footer" position="522,100">&lt;br&gt;
+<tw-storydata name="Documentation3" startnode="3" creator="Twine" creator-version="2.0.11" ifid="83D08CEE-F6E6-4D6E-A115-041BEAF985C7" format="Harlowe" options="" hidden=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Footer" tags="footer" position="522,100">&lt;br&gt;
 (if: (passage:)&#39;s name is &quot;Inventory&quot;)[&lt;!--do nothing--&gt;](else-if: (passage:)&#39;s tags contains &quot;inventory&quot;)[&lt;center&gt;[[check inventory-&gt;Inventory]]&lt;/center&gt;]    </tw-passagedata>
 <tw-passagedata pid="2" name="Inventory" tags="" position="669,102">&lt;h2&gt;Inventory&lt;/h2&gt;
 
@@ -31,6 +31,7 @@ Oh no.. the mean monster took away your (print: $inv[$x])!
 (if: $inv&#39;s length is 0)[You&#39;re all out of items, this game is over.](else:)[Be careful, you only have (print: $inv&#39;s length) items left. [[pass through courtyard again-&gt;Loop]]]</tw-passagedata>
 <tw-passagedata pid="5" name="Loop" tags="" position="97,398">(go-to: &quot;Courtyard&quot;)</tw-passagedata>
 </tw-storydata>
+
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _toConsumableArray(arr){if(Array.isArray(arr)){for(var i=0,arr2=Array(arr.length);i<arr.length;i++)arr2[i]=arr[i];return arr2}return Array.from(arr)}var _slicedToArray=function(){function sliceIterator(arr,i){var _arr=[],_n=!0,_d=!1,_e=void 0;try{for(var _s,_i=arr[Symbol.iterator]();!(_n=(_s=_i.next()).done)&&(_arr.push(_s.value),!i||_arr.length!==i);_n=!0);}catch(err){_d=!0,_e=err}finally{try{!_n&&_i["return"]&&_i["return"]()}finally{if(_d)throw _e}}return _arr}return function(arr,i){if(Array.isArray(arr))return arr;if(Symbol.iterator in Object(arr))return sliceIterator(arr,i);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(obj){return typeof obj}:function(obj){return obj&&"function"==typeof Symbol&&obj.constructor===Symbol?"symbol":typeof obj};!function(){/**
  * @license almond 0.3.1 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
@@ -64,15 +65,15 @@ var expr=$(this);switch(expr.tag()){case Selectors.hook:expr.attr("source")&&(se
 }),Engine.options.debug&&($(document.body).append(debugHTML),$(".show-invisibles").click(function(){html.toggleClass("debug-mode").is(".debug-mode")})),_installHandlers=null};!function(oldOnError){window.onerror=function(message,_,__,___,error){var stack=error&&error.stack&&"\n"+error.stack.replace(/\([^\)]+\)/g,"")+"\n"||"("+message+")\n";alert("Sorry to interrupt, but this page's code has got itself in a mess. "+stack+"(This is probably due to a bug in the Twine game engine.)"),window.onerror=oldOnError,"function"==typeof oldOnError&&oldOnError.apply(void 0,arguments)}}(window.onerror),$(function(){var header=$(Selectors.storyData);if(0!==header.length){"TwineApp"in window&&testPlayCleanup();var options=header.attr("options");options&&options.split(/\s/).forEach(function(b){Renderer.options[b]=Engine.options[b]=!0});var startPassage=header.attr("startnode");return Renderer.options.ifid=Engine.options.ifid=header.attr("ifid"),startPassage||(startPassage=[].reduce.call($(Selectors.passageData),function(id,el){var pid=el.getAttribute("pid");return id>pid?pid:id},1/0)),startPassage=$(Selectors.passageData+"[pid="+startPassage+"]").attr("name"),_installHandlers(),$(Selectors.script).each(function(i){try{_eval($(this).html())}catch(e){alert("There is a problem with this story's script (#"+(i+1)+"):\n\n"+e.message)}}),$(Selectors.stylesheet).each(function(i){$(document.head).append('<style data-title="Story stylesheet '+(i+1)+'">'+$(this).html())}),window.location.hash&&!window.location.hash.includes("stories")&&State.load(window.location.hash)?void Engine.showPassage(State.passage):void Engine.goToPassage(startPassage)}})}),define("harlowe",function(){}),require(["harlowe"])}();</script>
 </body>
 
-<!--   <!-- <footer class="site-footer">
+<!--   <footer class="site-footer">
 
     <div class="footer-col-wrapper">
-      <h3>&copy; Samelot's Twine2 Stores</h3>
+      <h3>&copy; samE's twine2</h3>
       <p>Powered by <a href="//jekyllrb.com">Jekyll</a> using <a href="//bitwiser.in/bitwiser-material/">Bitwiser-material</a> theme.</p>
     </div>
 
 </footer>
- -->
+
    -->
 
 </html>

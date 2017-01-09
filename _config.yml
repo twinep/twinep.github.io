@@ -1,6 +1,6 @@
 # Site settings
 ## Change the values as needed.
-title: Samelot's Twine2 Stores
+title: samE's twine2
 email: brijeshb42@gmail.com
 description: "A jekyll theme implementing material design by using muicss."
 keywords: "jekyll, theme, material, muicss"
@@ -27,7 +27,6 @@ exclude:
 full_name: Brijesh
 
 ##set this to enable disqus commenting
-disqus: bitwiser
 
 ##set this to enable google analytics
 #ga_id: analyticsID
